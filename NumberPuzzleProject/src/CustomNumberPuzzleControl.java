@@ -37,15 +37,15 @@ class CustomNumberPuzzleControl extends NumberPuzzleControl {
 		Button[] buttons = game.getButtons();
 		
 		//Your logic here
-		System.out.println(emptyCellId);
-		System.out.println(buttonClicked);
+		//System.out.println(emptyCellId);
+		//System.out.println(buttonClicked);
 		int clicked_btn_id = -1;
 		for(int i=0;i<buttons.length;i++) {
 			if(buttons[i] == buttonClicked) {
 				clicked_btn_id = i;
 			}
 		}
-		System.out.println(clicked_btn_id);
+		//System.out.println(clicked_btn_id);
 		if((clicked_btn_id<=15)&&(clicked_btn_id == emptyCellId-1 || clicked_btn_id == emptyCellId+1 || clicked_btn_id == emptyCellId-4 || clicked_btn_id == emptyCellId+4)){
 			swapButton(buttons[emptyCellId], buttonClicked);
 			emptyCellId = clicked_btn_id;
